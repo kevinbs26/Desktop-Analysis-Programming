@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DatabaseHotelModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Deduction">
+    <Key>
+      <PropertyRef Name="DeductionId" />
+    </Key>
+    <Property Name="DeductionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DeductionFee" Type="int" Nullable="false" />
+    <Property Name="DeductionReason" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ReservationId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FundRequest">
+    <Key>
+      <PropertyRef Name="FundRequestId" />
+    </Key>
+    <Property Name="FundRequestId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FundRequestDescription" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FundRequestAmount" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Guest">
+    <Key>
+      <PropertyRef Name="GuestId" />
+    </Key>
+    <Property Name="GuestId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GuestName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="GuestDataId" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Ingredient">
+    <Key>
+      <PropertyRef Name="IngredientId" />
+    </Key>
+    <Property Name="IngredientId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IngredientName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IngredientStock" Type="int" Nullable="false" />
+    <Property Name="IngredientMinimumStock" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="OrderId" />
+    </Key>
+    <Property Name="OrderId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrderType" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="OrderFood" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="OrderQuantity" Type="int" Nullable="false" />
+    <Property Name="OrderDelete" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PurchaseRequest">
+    <Key>
+      <PropertyRef Name="PurchaseRequestId" />
+    </Key>
+    <Property Name="PurchaseRequestId" Type="int" Nullable="false" />
+    <Property Name="PurchaseRequestDescription" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PurchaseRequestAmount" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Reservation">
+    <Key>
+      <PropertyRef Name="ReservationId" />
+    </Key>
+    <Property Name="ReservationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CheckIn" Type="date" Nullable="false" />
+    <Property Name="CheckOut" Type="date" Nullable="false" />
+    <Property Name="RoomId" Type="int" Nullable="false" />
+    <Property Name="DepositMoney" Type="int" Nullable="false" />
+    <Property Name="ReservationFee" Type="int" Nullable="false" />
+    <Property Name="ReviewId" Type="int" />
+    <Property Name="Complaint" Type="varchar" MaxLength="50" />
+    <Property Name="DeleteReservation" Type="int" Nullable="false" />
+    <Property Name="DeleteTicket" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Room">
+    <Key>
+      <PropertyRef Name="RoomId" />
+    </Key>
+    <Property Name="RoomId" Type="int" Nullable="false" />
+    <Property Name="RoomNumber" Type="int" Nullable="false" />
+    <Property Name="RoomStatus" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Staff">
+    <Key>
+      <PropertyRef Name="StaffId" />
+    </Key>
+    <Property Name="StaffId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StaffName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="StaffPosition" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Username" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="StaffSalary" Type="int" />
+    <Property Name="DeleteStaff" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Supply">
+    <Key>
+      <PropertyRef Name="SupplyId" />
+    </Key>
+    <Property Name="SupplyId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SupplyName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SupplyStock" Type="int" Nullable="false" />
+    <Property Name="SetSupplyMinimumStock" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Deduction__Reser__60A75C0F">
+    <End Role="Reservation" Type="Self.Reservation" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Deduction" Type="Self.Deduction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Reservation">
+        <PropertyRef Name="ReservationId" />
+      </Principal>
+      <Dependent Role="Deduction">
+        <PropertyRef Name="ReservationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DatabaseHotelModelStoreContainer">
+    <EntitySet Name="Deduction" EntityType="Self.Deduction" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FundRequest" EntityType="Self.FundRequest" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Guest" EntityType="Self.Guest" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ingredient" EntityType="Self.Ingredient" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Order" EntityType="Self.Order" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PurchaseRequest" EntityType="Self.PurchaseRequest" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Reservation" EntityType="Self.Reservation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Room" EntityType="Self.Room" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Staff" EntityType="Self.Staff" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Supply" EntityType="Self.Supply" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Deduction__Reser__60A75C0F" Association="Self.FK__Deduction__Reser__60A75C0F">
+      <End Role="Reservation" EntitySet="Reservation" />
+      <End Role="Deduction" EntitySet="Deduction" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

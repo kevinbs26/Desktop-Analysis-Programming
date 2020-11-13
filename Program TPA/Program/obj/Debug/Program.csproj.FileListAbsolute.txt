@@ -1,0 +1,66 @@
+D:\! Aslab\TPA\Desktop\TPA desktop\Program\Program\bin\Debug\Program.exe.config
+D:\! Aslab\TPA\Desktop\TPA desktop\Program\Program\bin\Debug\Program.exe
+D:\! Aslab\TPA\Desktop\TPA desktop\Program\Program\bin\Debug\Program.pdb
+D:\! Aslab\TPA\Desktop\TPA desktop\Program\Program\obj\Debug\Program.csprojAssemblyReference.cache
+D:\! Aslab\TPA\Desktop\TPA desktop\Program\Program\obj\Debug\Program.Properties.Resources.resources
+D:\! Aslab\TPA\Desktop\TPA desktop\Program\Program\obj\Debug\Program.csproj.GenerateResource.cache
+D:\! Aslab\TPA\Desktop\TPA desktop\Program\Program\obj\Debug\Program.csproj.CoreCompileInputs.cache
+D:\! Aslab\TPA\Desktop\TPA desktop\Program\Program\obj\Debug\Program.exe
+D:\! Aslab\TPA\Desktop\TPA desktop\Program\Program\obj\Debug\Program.pdb
+D:\! Aslab\TPA\Desktop\TPA desktop\Program\Program\obj\Debug\Program.Login.resources
+D:\! Aslab\TPA\Desktop\TPA desktop\Program\Program\bin\Debug\DatabaseHotel.mdf
+D:\! Aslab\TPA\Desktop\TPA desktop\Program\Program\bin\Debug\DatabaseHotel_log.ldf
+D:\! Aslab\TPA\Desktop\TPA desktop\Program\Program\bin\Debug\EntityFramework.dll
+D:\! Aslab\TPA\Desktop\TPA desktop\Program\Program\bin\Debug\EntityFramework.SqlServer.dll
+D:\! Aslab\TPA\Desktop\TPA desktop\Program\Program\bin\Debug\EntityFramework.xml
+D:\! Aslab\TPA\Desktop\TPA desktop\Program\Program\bin\Debug\EntityFramework.SqlServer.xml
+D:\! Aslab\TPA\Desktop\TPA desktop\Program\Program\obj\Debug\Program.csproj.CopyComplete
+D:\! Aslab\TPA\Desktop\TPA desktop\Program\Program\obj\Debug\Program.House_Keeeping.HouseKeeping.resources
+D:\! Aslab\TPA\Desktop\TPA desktop\Program\Program\obj\Debug\Program.Folder_Receptionist.Receptionist.resources
+D:\! Aslab\TPA\Desktop\TPA desktop\Program\Program\obj\Debug\Program.Folder_DiningRoom.DiningRoom.resources
+D:\! Aslab\TPA\Desktop\TPA desktop\Program\Program\obj\Debug\Program.Folder_RoomService.RoomService.resources
+D:\! Aslab\TPA\Desktop\TPA desktop\Program TPA\Program\bin\Debug\DatabaseHotel.mdf
+D:\! Aslab\TPA\Desktop\TPA desktop\Program TPA\Program\bin\Debug\DatabaseHotel_log.ldf
+D:\! Aslab\TPA\Desktop\TPA desktop\Program TPA\Program\bin\Debug\Program.exe.config
+D:\! Aslab\TPA\Desktop\TPA desktop\Program TPA\Program\bin\Debug\Program.exe
+D:\! Aslab\TPA\Desktop\TPA desktop\Program TPA\Program\bin\Debug\Program.pdb
+D:\! Aslab\TPA\Desktop\TPA desktop\Program TPA\Program\bin\Debug\EntityFramework.dll
+D:\! Aslab\TPA\Desktop\TPA desktop\Program TPA\Program\bin\Debug\EntityFramework.SqlServer.dll
+D:\! Aslab\TPA\Desktop\TPA desktop\Program TPA\Program\bin\Debug\EntityFramework.xml
+D:\! Aslab\TPA\Desktop\TPA desktop\Program TPA\Program\bin\Debug\EntityFramework.SqlServer.xml
+D:\! Aslab\TPA\Desktop\TPA desktop\Program TPA\Program\obj\Debug\Program.csprojAssemblyReference.cache
+D:\! Aslab\TPA\Desktop\TPA desktop\Program TPA\Program\obj\Debug\Program.Folder_DiningRoom.DiningRoom.resources
+D:\! Aslab\TPA\Desktop\TPA desktop\Program TPA\Program\obj\Debug\Program.Folder_Finance.Finance.resources
+D:\! Aslab\TPA\Desktop\TPA desktop\Program TPA\Program\obj\Debug\Program.House_Keeeping.HouseKeeping.resources
+D:\! Aslab\TPA\Desktop\TPA desktop\Program TPA\Program\obj\Debug\Program.Folder_HumanCapital.HumanCapital.resources
+D:\! Aslab\TPA\Desktop\TPA desktop\Program TPA\Program\obj\Debug\Program.Folder_Kitchen.Kitchen.resources
+D:\! Aslab\TPA\Desktop\TPA desktop\Program TPA\Program\obj\Debug\Program.Folder_Manager.Manager.resources
+D:\! Aslab\TPA\Desktop\TPA desktop\Program TPA\Program\obj\Debug\Program.Folder_Marketing.Marketing.resources
+D:\! Aslab\TPA\Desktop\TPA desktop\Program TPA\Program\obj\Debug\Program.Folder_Purchasing.Purchasing.resources
+D:\! Aslab\TPA\Desktop\TPA desktop\Program TPA\Program\obj\Debug\Program.Folder_Receptionist.Receptionist.resources
+D:\! Aslab\TPA\Desktop\TPA desktop\Program TPA\Program\obj\Debug\Program.Folder_Receptionist.Reservation.resources
+D:\! Aslab\TPA\Desktop\TPA desktop\Program TPA\Program\obj\Debug\Program.Folder_RoomService.RoomService.resources
+D:\! Aslab\TPA\Desktop\TPA desktop\Program TPA\Program\obj\Debug\Program.Login.resources
+D:\! Aslab\TPA\Desktop\TPA desktop\Program TPA\Program\obj\Debug\Program.Properties.Resources.resources
+D:\! Aslab\TPA\Desktop\TPA desktop\Program TPA\Program\obj\Debug\Program.csproj.GenerateResource.cache
+D:\! Aslab\TPA\Desktop\TPA desktop\Program TPA\Program\obj\Debug\Program.csproj.CoreCompileInputs.cache
+D:\! Aslab\TPA\Desktop\TPA desktop\Program TPA\Program\obj\Debug\Program.csproj.CopyComplete
+D:\! Aslab\TPA\Desktop\TPA desktop\Program TPA\Program\obj\Debug\Program.exe
+D:\! Aslab\TPA\Desktop\TPA desktop\Program TPA\Program\obj\Debug\Program.pdb
+D:\! Aslab\TPA\Desktop\TPA desktop\Program TPA\Program\obj\Debug\Program.Folder_Receptionist.AddGuest.resources
+D:\! Aslab\TPA\Desktop\TPA desktop\Program TPA\Program\bin\Debug\QRCoder.dll
+D:\! Aslab\TPA\Desktop\TPA desktop\Program TPA\Program\bin\Debug\System.Drawing.Common.dll
+D:\! Aslab\TPA\Desktop\TPA desktop\Program TPA\Program\obj\Debug\Program.Folder_DiningRoom.ViewTicket.resources
+D:\! Aslab\TPA\Desktop\TPA desktop\Program TPA\Program\obj\Debug\Program.Folder_RoomService.AddOrder.resources
+D:\! Aslab\TPA\Desktop\TPA desktop\Program TPA\Program\obj\Debug\Program.Folder_HouseKeeeping.AllRoomcs.resources
+D:\! Aslab\TPA\Desktop\TPA desktop\Program TPA\Program\obj\Debug\Program.Folder_HouseKeeeping.supply.resources
+D:\! Aslab\TPA\Desktop\TPA desktop\Program TPA\Program\obj\Debug\Program.Folder_HumanCapital.AddStaff.resources
+D:\! Aslab\TPA\Desktop\TPA desktop\Program TPA\Program\obj\Debug\Program.Folder_HumanCapital.HireStaff.resources
+D:\! Aslab\TPA\Desktop\TPA desktop\Program TPA\Program\obj\Debug\Program.Folder_DiningRoom.RequestOrder.resources
+D:\! Aslab\TPA\Desktop\TPA desktop\Program TPA\Program\obj\Debug\Program.Folder_Kitchen.ViewOrder.resources
+D:\! Aslab\TPA\Desktop\TPA desktop\Program TPA\Program\obj\Debug\Program.Folder_Kitchen.CheckIngredient.resources
+D:\! Aslab\TPA\Desktop\TPA desktop\Program TPA\Program\obj\Debug\Program.Folder_HouseKeeeping.CheckMinibar.resources
+D:\! Aslab\TPA\Desktop\TPA desktop\Program TPA\Program\obj\Debug\Program.Folder_Receptionist.ViewDeduction.resources
+D:\! Aslab\TPA\Desktop\TPA desktop\Program TPA\Program\obj\Debug\Program.Folder_Finance.ViewFundRequest.resources
+D:\! Aslab\TPA\Desktop\TPA desktop\Program TPA\Program\obj\Debug\Program.Folder_Marketing.FundRequestMarketing.resources
+D:\! Aslab\TPA\Desktop\TPA desktop\Program TPA\Program\obj\Debug\Program.Folder_Receptionist.RenewTicket.resources

@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DatabaseHotelModelStoreContainer" CdmEntityContainer="DatabaseHotelEntities">
+    <EntitySetMapping Name="Deductions">
+      <EntityTypeMapping TypeName="DatabaseHotelModel.Deduction">
+        <MappingFragment StoreEntitySet="Deduction">
+          <ScalarProperty Name="ReservationId" ColumnName="ReservationId" />
+          <ScalarProperty Name="DeductionReason" ColumnName="DeductionReason" />
+          <ScalarProperty Name="DeductionFee" ColumnName="DeductionFee" />
+          <ScalarProperty Name="DeductionId" ColumnName="DeductionId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Guests">
+      <EntityTypeMapping TypeName="DatabaseHotelModel.Guest">
+        <MappingFragment StoreEntitySet="Guest">
+          <ScalarProperty Name="GuestDataId" ColumnName="GuestDataId" />
+          <ScalarProperty Name="GuestName" ColumnName="GuestName" />
+          <ScalarProperty Name="GuestId" ColumnName="GuestId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reservations">
+      <EntityTypeMapping TypeName="DatabaseHotelModel.Reservation">
+        <MappingFragment StoreEntitySet="Reservation">
+          <ScalarProperty Name="DeleteTicket" ColumnName="DeleteTicket" />
+          <ScalarProperty Name="DeleteReservation" ColumnName="DeleteReservation" />
+          <ScalarProperty Name="Complaint" ColumnName="Complaint" />
+          <ScalarProperty Name="ReviewId" ColumnName="ReviewId" />
+          <ScalarProperty Name="ReservationFee" ColumnName="ReservationFee" />
+          <ScalarProperty Name="DepositMoney" ColumnName="DepositMoney" />
+          <ScalarProperty Name="RoomId" ColumnName="RoomId" />
+          <ScalarProperty Name="CheckOut" ColumnName="CheckOut" />
+          <ScalarProperty Name="CheckIn" ColumnName="CheckIn" />
+          <ScalarProperty Name="ReservationId" ColumnName="ReservationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Staffs">
+      <EntityTypeMapping TypeName="DatabaseHotelModel.Staff">
+        <MappingFragment StoreEntitySet="Staff">
+          <ScalarProperty Name="DeleteStaff" ColumnName="DeleteStaff" />
+          <ScalarProperty Name="StaffSalary" ColumnName="StaffSalary" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="StaffPosition" ColumnName="StaffPosition" />
+          <ScalarProperty Name="StaffName" ColumnName="StaffName" />
+          <ScalarProperty Name="StaffId" ColumnName="StaffId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FundRequests">
+      <EntityTypeMapping TypeName="DatabaseHotelModel.FundRequest">
+        <MappingFragment StoreEntitySet="FundRequest">
+          <ScalarProperty Name="FundRequestAmount" ColumnName="FundRequestAmount" />
+          <ScalarProperty Name="FundRequestDescription" ColumnName="FundRequestDescription" />
+          <ScalarProperty Name="FundRequestId" ColumnName="FundRequestId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ingredients">
+      <EntityTypeMapping TypeName="DatabaseHotelModel.Ingredient">
+        <MappingFragment StoreEntitySet="Ingredient">
+          <ScalarProperty Name="IngredientMinimumStock" ColumnName="IngredientMinimumStock" />
+          <ScalarProperty Name="IngredientStock" ColumnName="IngredientStock" />
+          <ScalarProperty Name="IngredientName" ColumnName="IngredientName" />
+          <ScalarProperty Name="IngredientId" ColumnName="IngredientId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orders">
+      <EntityTypeMapping TypeName="DatabaseHotelModel.Order">
+        <MappingFragment StoreEntitySet="Order">
+          <ScalarProperty Name="OrderDelete" ColumnName="OrderDelete" />
+          <ScalarProperty Name="OrderQuantity" ColumnName="OrderQuantity" />
+          <ScalarProperty Name="OrderFood" ColumnName="OrderFood" />
+          <ScalarProperty Name="OrderType" ColumnName="OrderType" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PurchaseRequests">
+      <EntityTypeMapping TypeName="DatabaseHotelModel.PurchaseRequest">
+        <MappingFragment StoreEntitySet="PurchaseRequest">
+          <ScalarProperty Name="PurchaseRequestAmount" ColumnName="PurchaseRequestAmount" />
+          <ScalarProperty Name="PurchaseRequestDescription" ColumnName="PurchaseRequestDescription" />
+          <ScalarProperty Name="PurchaseRequestId" ColumnName="PurchaseRequestId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rooms">
+      <EntityTypeMapping TypeName="DatabaseHotelModel.Room">
+        <MappingFragment StoreEntitySet="Room">
+          <ScalarProperty Name="RoomStatus" ColumnName="RoomStatus" />
+          <ScalarProperty Name="RoomNumber" ColumnName="RoomNumber" />
+          <ScalarProperty Name="RoomId" ColumnName="RoomId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Supplies">
+      <EntityTypeMapping TypeName="DatabaseHotelModel.Supply">
+        <MappingFragment StoreEntitySet="Supply">
+          <ScalarProperty Name="SetSupplyMinimumStock" ColumnName="SetSupplyMinimumStock" />
+          <ScalarProperty Name="SupplyStock" ColumnName="SupplyStock" />
+          <ScalarProperty Name="SupplyName" ColumnName="SupplyName" />
+          <ScalarProperty Name="SupplyId" ColumnName="SupplyId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

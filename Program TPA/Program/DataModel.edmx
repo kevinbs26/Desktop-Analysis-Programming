@@ -1,0 +1,506 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DatabaseHotelModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Candidate">
+          <Key>
+            <PropertyRef Name="CandidateId" />
+          </Key>
+          <Property Name="CandidateId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CandidateName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CandidatePosition" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="DeleteCandidate" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Deduction">
+          <Key>
+            <PropertyRef Name="DeductionId" />
+          </Key>
+          <Property Name="DeductionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DeductionFee" Type="int" Nullable="false" />
+          <Property Name="DeductionReason" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ReservationId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DiningRoomOrder">
+          <Key>
+            <PropertyRef Name="DOrderId" />
+          </Key>
+          <Property Name="DOrderId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DOrderFood" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="DOrderQuantity" Type="int" Nullable="false" />
+          <Property Name="DOrderDelete" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FundRequest">
+          <Key>
+            <PropertyRef Name="FundRequestId" />
+          </Key>
+          <Property Name="FundRequestId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FundRequestAmmount" Type="int" Nullable="false" />
+          <Property Name="FundRequestReason" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="FundRequestStatus" Type="int" Nullable="false" />
+          <Property Name="FundRequestFrom" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Guest">
+          <Key>
+            <PropertyRef Name="GuestId" />
+          </Key>
+          <Property Name="GuestId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GuestName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="GuestDataId" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Ingredient">
+          <Key>
+            <PropertyRef Name="IngredientId" />
+          </Key>
+          <Property Name="IngredientId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IngredientName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="IngredientStock" Type="int" Nullable="false" />
+          <Property Name="IngredientMinimumStock" Type="int" Nullable="false" />
+          <Property Name="DeleteIngredient" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Interview">
+          <Key>
+            <PropertyRef Name="InterviewId" />
+          </Key>
+          <Property Name="InterviewId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="InterviewName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="InterviewPosition" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="DeleteInterview" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="OrderId" />
+          </Key>
+          <Property Name="OrderId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OrderType" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="OrderFood" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="OrderQuantity" Type="int" Nullable="false" />
+          <Property Name="OrderDelete" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Reservation">
+          <Key>
+            <PropertyRef Name="ReservationId" />
+          </Key>
+          <Property Name="ReservationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CheckIn" Type="date" Nullable="false" />
+          <Property Name="CheckOut" Type="date" Nullable="false" />
+          <Property Name="RoomId" Type="int" Nullable="false" />
+          <Property Name="DepositMoney" Type="int" Nullable="false" />
+          <Property Name="ReservationFee" Type="int" Nullable="false" />
+          <Property Name="ReviewId" Type="int" />
+          <Property Name="ComplaintId" Type="varchar" MaxLength="50" />
+          <Property Name="DeleteReservation" Type="int" Nullable="false" />
+          <Property Name="TicketAvaibility" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Room">
+          <Key>
+            <PropertyRef Name="RoomId" />
+          </Key>
+          <Property Name="RoomId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RoomNumber" Type="int" Nullable="false" />
+          <Property Name="RoomStatus" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Staff">
+          <Key>
+            <PropertyRef Name="StaffId" />
+          </Key>
+          <Property Name="StaffId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StaffName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="StaffPosition" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Username" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="StaffSalary" Type="int" Nullable="false" />
+          <Property Name="DeleteStaff" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Supply">
+          <Key>
+            <PropertyRef Name="SupplyId" />
+          </Key>
+          <Property Name="SupplyId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SupplyName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="SupplyStock" Type="int" Nullable="false" />
+          <Property Name="SetSupplyMinimumStock" Type="int" Nullable="false" />
+          <Property Name="DeleteSupply" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Training">
+          <Key>
+            <PropertyRef Name="TrainingId" />
+          </Key>
+          <Property Name="TrainingId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TrainingName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="TrainingPosition" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="DeleteTraining" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__Deduction__Reser__778AC167">
+          <End Role="Reservation" Type="Self.Reservation" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Deduction" Type="Self.Deduction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Reservation">
+              <PropertyRef Name="ReservationId" />
+            </Principal>
+            <Dependent Role="Deduction">
+              <PropertyRef Name="ReservationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DatabaseHotelModelStoreContainer">
+          <EntitySet Name="Candidate" EntityType="Self.Candidate" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Deduction" EntityType="Self.Deduction" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DiningRoomOrder" EntityType="Self.DiningRoomOrder" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FundRequest" EntityType="Self.FundRequest" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Guest" EntityType="Self.Guest" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Ingredient" EntityType="Self.Ingredient" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Interview" EntityType="Self.Interview" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Order" EntityType="Self.Order" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Reservation" EntityType="Self.Reservation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Room" EntityType="Self.Room" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Staff" EntityType="Self.Staff" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Supply" EntityType="Self.Supply" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Training" EntityType="Self.Training" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Deduction__Reser__778AC167" Association="Self.FK__Deduction__Reser__778AC167">
+            <End Role="Reservation" EntitySet="Reservation" />
+            <End Role="Deduction" EntitySet="Deduction" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DatabaseHotelModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="DatabaseHotelEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Deductions" EntityType="DatabaseHotelModel.Deduction" />
+          <EntitySet Name="Guests" EntityType="DatabaseHotelModel.Guest" />
+          <EntitySet Name="Reservations" EntityType="DatabaseHotelModel.Reservation" />
+          <EntitySet Name="Rooms" EntityType="DatabaseHotelModel.Room" />
+          <EntitySet Name="Staffs" EntityType="DatabaseHotelModel.Staff" />
+          <AssociationSet Name="FK__Deduction__Reser__778AC167" Association="DatabaseHotelModel.FK__Deduction__Reser__778AC167">
+            <End Role="Reservation" EntitySet="Reservations" />
+            <End Role="Deduction" EntitySet="Deductions" />
+          </AssociationSet>
+          <EntitySet Name="Supplies" EntityType="DatabaseHotelModel.Supply" />
+          <EntitySet Name="Ingredients" EntityType="DatabaseHotelModel.Ingredient" />
+          <EntitySet Name="Orders" EntityType="DatabaseHotelModel.Order" />
+          <EntitySet Name="Interviews" EntityType="DatabaseHotelModel.Interview" />
+          <EntitySet Name="Trainings" EntityType="DatabaseHotelModel.Training" />
+          <EntitySet Name="Candidates" EntityType="DatabaseHotelModel.Candidate" />
+          <EntitySet Name="DiningRoomOrders" EntityType="DatabaseHotelModel.DiningRoomOrder" />
+          <EntitySet Name="FundRequests" EntityType="DatabaseHotelModel.FundRequest" />
+          </EntityContainer>
+        <EntityType Name="Deduction">
+          <Key>
+            <PropertyRef Name="DeductionId" />
+          </Key>
+          <Property Name="DeductionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DeductionFee" Type="Int32" Nullable="false" />
+          <Property Name="DeductionReason" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ReservationId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Reservation" Relationship="DatabaseHotelModel.FK__Deduction__Reser__778AC167" FromRole="Deduction" ToRole="Reservation" />
+        </EntityType>
+        <EntityType Name="Guest">
+          <Key>
+            <PropertyRef Name="GuestId" />
+          </Key>
+          <Property Name="GuestId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GuestName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="GuestDataId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Reservation">
+          <Key>
+            <PropertyRef Name="ReservationId" />
+          </Key>
+          <Property Name="ReservationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CheckIn" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="CheckOut" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="RoomId" Type="Int32" Nullable="false" />
+          <Property Name="DepositMoney" Type="Int32" Nullable="false" />
+          <Property Name="ReservationFee" Type="Int32" Nullable="false" />
+          <Property Name="ReviewId" Type="Int32" />
+          <Property Name="ComplaintId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DeleteReservation" Type="Int32" Nullable="false" />
+          <Property Name="TicketAvaibility" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Deductions" Relationship="DatabaseHotelModel.FK__Deduction__Reser__778AC167" FromRole="Reservation" ToRole="Deduction" />
+        </EntityType>
+        <EntityType Name="Room">
+          <Key>
+            <PropertyRef Name="RoomId" />
+          </Key>
+          <Property Name="RoomId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RoomNumber" Type="Int32" Nullable="false" />
+          <Property Name="RoomStatus" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Staff">
+          <Key>
+            <PropertyRef Name="StaffId" />
+          </Key>
+          <Property Name="StaffId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StaffName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="StaffPosition" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Username" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="StaffSalary" Type="Int32" Nullable="false" />
+          <Property Name="DeleteStaff" Type="Int32" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__Deduction__Reser__778AC167">
+          <End Type="DatabaseHotelModel.Reservation" Role="Reservation" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="DatabaseHotelModel.Deduction" Role="Deduction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Reservation">
+              <PropertyRef Name="ReservationId" />
+            </Principal>
+            <Dependent Role="Deduction">
+              <PropertyRef Name="ReservationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Supply">
+          <Key>
+            <PropertyRef Name="SupplyId" />
+          </Key>
+          <Property Name="SupplyId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SupplyName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SupplyStock" Type="Int32" Nullable="false" />
+          <Property Name="SetSupplyMinimumStock" Type="Int32" Nullable="false" />
+          <Property Name="DeleteSupply" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Ingredient">
+          <Key>
+            <PropertyRef Name="IngredientId" />
+          </Key>
+          <Property Name="IngredientId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IngredientName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IngredientStock" Type="Int32" Nullable="false" />
+          <Property Name="IngredientMinimumStock" Type="Int32" Nullable="false" />
+          <Property Name="DeleteIngredient" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="OrderId" />
+          </Key>
+          <Property Name="OrderId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OrderType" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="OrderFood" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="OrderQuantity" Type="Int32" Nullable="false" />
+          <Property Name="OrderDelete" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Interview">
+          <Key>
+            <PropertyRef Name="InterviewId" />
+          </Key>
+          <Property Name="InterviewId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="InterviewName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="InterviewPosition" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DeleteInterview" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Training">
+          <Key>
+            <PropertyRef Name="TrainingId" />
+          </Key>
+          <Property Name="TrainingId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TrainingName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TrainingPosition" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DeleteTraining" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Candidate">
+          <Key>
+            <PropertyRef Name="CandidateId" />
+          </Key>
+          <Property Name="CandidateId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CandidateName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CandidatePosition" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DeleteCandidate" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DiningRoomOrder">
+          <Key>
+            <PropertyRef Name="DOrderId" />
+          </Key>
+          <Property Name="DOrderId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DOrderFood" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DOrderQuantity" Type="Int32" Nullable="false" />
+          <Property Name="DOrderDelete" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FundRequest">
+          <Key>
+            <PropertyRef Name="FundRequestId" />
+          </Key>
+          <Property Name="FundRequestId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FundRequestAmmount" Type="Int32" Nullable="false" />
+          <Property Name="FundRequestReason" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FundRequestStatus" Type="Int32" Nullable="false" />
+          <Property Name="FundRequestFrom" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DatabaseHotelModelStoreContainer" CdmEntityContainer="DatabaseHotelEntities">
+          <EntitySetMapping Name="Deductions">
+            <EntityTypeMapping TypeName="DatabaseHotelModel.Deduction">
+              <MappingFragment StoreEntitySet="Deduction">
+                <ScalarProperty Name="ReservationId" ColumnName="ReservationId" />
+                <ScalarProperty Name="DeductionReason" ColumnName="DeductionReason" />
+                <ScalarProperty Name="DeductionFee" ColumnName="DeductionFee" />
+                <ScalarProperty Name="DeductionId" ColumnName="DeductionId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Guests">
+            <EntityTypeMapping TypeName="DatabaseHotelModel.Guest">
+              <MappingFragment StoreEntitySet="Guest">
+                <ScalarProperty Name="GuestDataId" ColumnName="GuestDataId" />
+                <ScalarProperty Name="GuestName" ColumnName="GuestName" />
+                <ScalarProperty Name="GuestId" ColumnName="GuestId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Reservations">
+            <EntityTypeMapping TypeName="DatabaseHotelModel.Reservation">
+              <MappingFragment StoreEntitySet="Reservation">
+                <ScalarProperty Name="TicketAvaibility" ColumnName="TicketAvaibility" />
+                <ScalarProperty Name="DeleteReservation" ColumnName="DeleteReservation" />
+                <ScalarProperty Name="ComplaintId" ColumnName="ComplaintId" />
+                <ScalarProperty Name="ReviewId" ColumnName="ReviewId" />
+                <ScalarProperty Name="ReservationFee" ColumnName="ReservationFee" />
+                <ScalarProperty Name="DepositMoney" ColumnName="DepositMoney" />
+                <ScalarProperty Name="RoomId" ColumnName="RoomId" />
+                <ScalarProperty Name="CheckOut" ColumnName="CheckOut" />
+                <ScalarProperty Name="CheckIn" ColumnName="CheckIn" />
+                <ScalarProperty Name="ReservationId" ColumnName="ReservationId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Rooms">
+            <EntityTypeMapping TypeName="DatabaseHotelModel.Room">
+              <MappingFragment StoreEntitySet="Room">
+                <ScalarProperty Name="RoomStatus" ColumnName="RoomStatus" />
+                <ScalarProperty Name="RoomNumber" ColumnName="RoomNumber" />
+                <ScalarProperty Name="RoomId" ColumnName="RoomId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Staffs">
+            <EntityTypeMapping TypeName="DatabaseHotelModel.Staff">
+              <MappingFragment StoreEntitySet="Staff">
+                <ScalarProperty Name="DeleteStaff" ColumnName="DeleteStaff" />
+                <ScalarProperty Name="StaffSalary" ColumnName="StaffSalary" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="StaffPosition" ColumnName="StaffPosition" />
+                <ScalarProperty Name="StaffName" ColumnName="StaffName" />
+                <ScalarProperty Name="StaffId" ColumnName="StaffId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Supplies">
+            <EntityTypeMapping TypeName="DatabaseHotelModel.Supply">
+              <MappingFragment StoreEntitySet="Supply">
+                <ScalarProperty Name="DeleteSupply" ColumnName="DeleteSupply" />
+                <ScalarProperty Name="SetSupplyMinimumStock" ColumnName="SetSupplyMinimumStock" />
+                <ScalarProperty Name="SupplyStock" ColumnName="SupplyStock" />
+                <ScalarProperty Name="SupplyName" ColumnName="SupplyName" />
+                <ScalarProperty Name="SupplyId" ColumnName="SupplyId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Ingredients">
+            <EntityTypeMapping TypeName="DatabaseHotelModel.Ingredient">
+              <MappingFragment StoreEntitySet="Ingredient">
+                <ScalarProperty Name="DeleteIngredient" ColumnName="DeleteIngredient" />
+                <ScalarProperty Name="IngredientMinimumStock" ColumnName="IngredientMinimumStock" />
+                <ScalarProperty Name="IngredientStock" ColumnName="IngredientStock" />
+                <ScalarProperty Name="IngredientName" ColumnName="IngredientName" />
+                <ScalarProperty Name="IngredientId" ColumnName="IngredientId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Orders">
+            <EntityTypeMapping TypeName="DatabaseHotelModel.Order">
+              <MappingFragment StoreEntitySet="Order">
+                <ScalarProperty Name="OrderDelete" ColumnName="OrderDelete" />
+                <ScalarProperty Name="OrderQuantity" ColumnName="OrderQuantity" />
+                <ScalarProperty Name="OrderFood" ColumnName="OrderFood" />
+                <ScalarProperty Name="OrderType" ColumnName="OrderType" />
+                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Interviews">
+            <EntityTypeMapping TypeName="DatabaseHotelModel.Interview">
+              <MappingFragment StoreEntitySet="Interview">
+                <ScalarProperty Name="DeleteInterview" ColumnName="DeleteInterview" />
+                <ScalarProperty Name="InterviewPosition" ColumnName="InterviewPosition" />
+                <ScalarProperty Name="InterviewName" ColumnName="InterviewName" />
+                <ScalarProperty Name="InterviewId" ColumnName="InterviewId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Trainings">
+            <EntityTypeMapping TypeName="DatabaseHotelModel.Training">
+              <MappingFragment StoreEntitySet="Training">
+                <ScalarProperty Name="DeleteTraining" ColumnName="DeleteTraining" />
+                <ScalarProperty Name="TrainingPosition" ColumnName="TrainingPosition" />
+                <ScalarProperty Name="TrainingName" ColumnName="TrainingName" />
+                <ScalarProperty Name="TrainingId" ColumnName="TrainingId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Candidates">
+            <EntityTypeMapping TypeName="DatabaseHotelModel.Candidate">
+              <MappingFragment StoreEntitySet="Candidate">
+                <ScalarProperty Name="DeleteCandidate" ColumnName="DeleteCandidate" />
+                <ScalarProperty Name="CandidatePosition" ColumnName="CandidatePosition" />
+                <ScalarProperty Name="CandidateName" ColumnName="CandidateName" />
+                <ScalarProperty Name="CandidateId" ColumnName="CandidateId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DiningRoomOrders">
+            <EntityTypeMapping TypeName="DatabaseHotelModel.DiningRoomOrder">
+              <MappingFragment StoreEntitySet="DiningRoomOrder">
+                <ScalarProperty Name="DOrderDelete" ColumnName="DOrderDelete" />
+                <ScalarProperty Name="DOrderQuantity" ColumnName="DOrderQuantity" />
+                <ScalarProperty Name="DOrderFood" ColumnName="DOrderFood" />
+                <ScalarProperty Name="DOrderId" ColumnName="DOrderId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FundRequests">
+            <EntityTypeMapping TypeName="DatabaseHotelModel.FundRequest">
+              <MappingFragment StoreEntitySet="FundRequest">
+                <ScalarProperty Name="FundRequestFrom" ColumnName="FundRequestFrom" />
+                <ScalarProperty Name="FundRequestStatus" ColumnName="FundRequestStatus" />
+                <ScalarProperty Name="FundRequestReason" ColumnName="FundRequestReason" />
+                <ScalarProperty Name="FundRequestAmmount" ColumnName="FundRequestAmmount" />
+                <ScalarProperty Name="FundRequestId" ColumnName="FundRequestId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
